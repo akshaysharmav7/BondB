@@ -1,0 +1,5 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Optional, ensures full height for the body */
+  }
