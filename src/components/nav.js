@@ -23,7 +23,7 @@ const Navbar = () => {
         <ul className="nav-icons">
           <div className="icon-container">
             <img className="icon" src={iconL} alt="Illustrations" height={70} width={70} />
-            <p className="icon-text-illustrations">Illustrations</p>
+            <p className="icon-text">Illustrations</p>
           </div>
           <div className="icon-container">
             <img className="icon" src={iconS} alt="Sounds" height={70} width={70} />

@@ -19,19 +19,43 @@ const items = [
   { img: box5, text: 'Designer Life' },
   { img: box6, text: 'Office snack' },
   { img: box7, text: 'Quite Time' },
-  { img: box8, text: 'Deal ON' }
+  { img: box8, text: 'Deal ON' },
+  { img: box5, text: 'Designer Life' },
+  { img: box6, text: 'Office snack' },
+  { img: box7, text: 'Quite Time' },
+  { img: box8, text: 'Deal ON' },
+  { img: box8, text: 'Deal ON' },
+  { img: box5, text: 'Designer Life' },
+  { img: box6, text: 'Office snack' },
+  { img: box7, text: 'Quite Time' },
+  { img: box1, text: 'Girl in the office' },
+  { img: box2, text: 'On the office' },
+  { img: box3, text: 'In the office' },
+  { img: box4, text: 'Working' },
+  { img: box5, text: 'Designer Life' },
+  { img: box6, text: 'Office snack' },
+  { img: box7, text: 'Quite Time' },
+  { img: box8, text: 'Deal ON' },
+  { img: box5, text: 'Designer Life' },
+  { img: box6, text: 'Office snack' },
+  { img: box7, text: 'Quite Time' },
+  { img: box8, text: 'Deal ON' },
+  { img: box8, text: 'Deal ON' },
+  { img: box5, text: 'Designer Life' },
+  { img: box6, text: 'Office snack' },
+  { img: box7, text: 'Quite Time' },
 ];
 
 const Illustrations = () => {
   return (
-    <>
+    <div className='wholebox'>
+      <div><Navbar /></div>
       <div className="bgbox">
-      <Navbar />
         <div className="search">
-          <IoIosSearch className="sicon" />
+          <IoIosSearch className="sicon"/>
           <input type="text" placeholder="Search" className="inputbox" />
         </div>
-        <div className="bodycontainer">
+        
         <div className="container">
           {items.map((item, index) => (
             <div key={index} className="items">
@@ -40,9 +64,9 @@ const Illustrations = () => {
             </div>
           ))}
         </div>
-        </div>
+        
       </div>
-    </>
+    </div>
   );
 };
 
