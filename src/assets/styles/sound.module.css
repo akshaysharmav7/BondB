@@ -1,41 +1,31 @@
-/* Main background styling */
-.wholebox{
-  /* border: 2px solid black; */
-  /* position:sticky; */
-  /* top: 1224px; */
-  overflow-y: auto;
-  position: absolute;
-  scroll-behavior: smooth;
-  height: 1024px; 
-  width: 100vw;
-  background: url('../images/illustration/dbWhite.jpg') center center/cover no-repeat;
-  z-index: 1;
-}
-    
-  /* Grid container */
+.wholebox {
+    overflow-y: auto;
+    /* position: sticky; */
+    scroll-behavior: smooth;
+    height: 1024px;
+    width: 100vw;
+    background: url('../images/sounds//soundsBg.jpg') center center/cover no-repeat;
+    z-index: 1;
+  }
+  
   .container {
     display: grid;
     grid-template-columns: repeat(4, 290px);
     grid-row-gap: 90px;
-    grid-column-gap:37px;
+    grid-column-gap: 37px;
     justify-content: center;
     overflow-y: auto;
     scrollbar-width: none;
-    padding-bottom:54px ;
-    /* height: 300px; */
+    padding-bottom: 54px;
     max-height: 600px;
   }
   
-
   .bodycontainer {
-    /* opacity: 1; */
     margin-left: 40px;
-    height: 630px; /* Keep it fixed to allow scrolling within */
-    /* overflow-y: auto;  */
+    height: 630px;
     scroll-behavior: smooth;
-    padding-right: 10px; /* Add padding for better spacing */
+    padding-right: 10px;
     background: transparent;
-    
   }
   
   .bodycontainer::-webkit-scrollbar {
@@ -51,7 +41,6 @@
     background-color: rgba(230, 230, 230, 0.7);
   }
   
-  /* Search box */
   .search {
     margin-top: 60px;
     margin-bottom: 59px;
@@ -61,9 +50,10 @@
     align-items: center;
     justify-content: center;
     outline: none;
-  } 
-
-  .search:hover{
+    visibility: hidden;
+  }
+  
+  .search:hover {
     scale: 114%;
     transition-duration: 1s;
     outline: none;
@@ -92,15 +82,11 @@
     text-align: center;
     outline: none;
   }
-
-  /* Individual items */
+  
   .items {
     position: relative;
     text-align: center;
-    /* border-radius: 32px; */
-    /* border: 2px solid black; */
-    background:transparent;
-    
+    background: transparent;
   }
   
   .imgs {
@@ -108,7 +94,6 @@
     height: 266px;
     object-fit: contain;
     border-radius: 23px;
-    /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); */
     box-shadow: 0px 0px 0.8px black;
   }
   
@@ -119,16 +104,23 @@
     width: 290px;
     height: 66px;
     backdrop-filter: blur(4.79px);
-    background: transparent;
+    /* background: transparent; */
+    /* opacity: .4; */
+    background: linear-gradient(
+        to right, 
+        rgba(245, 245, 245, 0.7),  /* Light gray with 70% opacity */
+        rgba(255, 255, 255, 0),    /* Fully transparent */
+        rgba(255, 255, 255, 1)     /* White with full opacity */
+      );
+    border: 1px solid white;
     border-radius: 17px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 16px;
     font-weight: 390;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    box-shadow: 0px 0px  0.8px black;
-    
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-shadow: 0px 0px 0.8px black;
   }
   
   .items:hover .desc {

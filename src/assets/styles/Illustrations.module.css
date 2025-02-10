@@ -1,0 +1,126 @@
+.wholebox {
+  overflow-y: auto;
+  position: absolute;
+  scroll-behavior: smooth;
+  height: 1024px;
+  width: 100vw;
+  background: url('../images/illustration/dbWhite.jpg') center center/cover no-repeat;
+  z-index: 1;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 290px);
+  grid-row-gap: 90px;
+  grid-column-gap: 37px;
+  justify-content: center;
+  overflow-y: auto;
+  scrollbar-width: none;
+  padding-bottom: 54px;
+  max-height: 600px;
+}
+
+.bodycontainer {
+  margin-left: 40px;
+  height: 630px;
+  scroll-behavior: smooth;
+  padding-right: 10px;
+  background: transparent;
+}
+
+.bodycontainer::-webkit-scrollbar {
+  width: 8px;
+}
+
+.bodycontainer::-webkit-scrollbar-thumb {
+  background-color: rgba(198, 198, 198, 0.5);
+  border-radius: 4px;
+}
+
+.bodycontainer::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(230, 230, 230, 0.7);
+}
+
+.search {
+  margin-top: 60px;
+  margin-bottom: 59px;
+  margin-left: 93px;
+  width: 363px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+}
+
+.search:hover {
+  scale: 114%;
+  transition-duration: 1s;
+  outline: none;
+}
+
+.sicon {
+  height: 30px;
+  width: 35px;
+  margin-left: 30px;
+  background: white;
+  border: 4px solid #E6EFF3;
+  border-radius: 100%;
+  padding: 8px;
+  box-shadow: 0 3px 2px grey;
+  z-index: 1;
+}
+
+.inputbox {
+  background-color: #E6EFF3;
+  width: 326px;
+  height: 47px;
+  border-radius: 64px;
+  border: none;
+  margin-left: -30px;
+  box-shadow: 0 3px 5px grey;
+  text-align: center;
+  outline: none;
+}
+
+.items {
+  position: relative;
+  text-align: center;
+  background: transparent;
+}
+
+.imgs {
+  width: 290px;
+  height: 266px;
+  object-fit: contain;
+  border-radius: 23px;
+  box-shadow: 0px 0px 0.8px black;
+}
+
+.desc {
+  position: absolute;
+  margin-top: -20px;
+  bottom: -13px;
+  width: 290px;
+  height: 66px;
+  backdrop-filter: blur(4.79px);
+  background: linear-gradient(
+        to right, 
+        rgba(245, 245, 245, 0.7),  /* Light gray with 70% opacity */
+        rgba(255, 255, 255, 0),    /* Fully transparent */
+        rgba(255, 255, 255, 1)     /* White with full opacity */
+      );
+  border-radius: 17px;
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 390;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  box-shadow: 0px 0px 0.8px black;
+}
+
+.items:hover .desc {
+  transform: scale(1.1);
+  transition: transform 0.6s ease;
+}

@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Illustrations from './pages/Illustrations';
-import Sounds from './pages/sounds';
+import Sounds from './pages/Sounds';
 
 function App() {
   return (
