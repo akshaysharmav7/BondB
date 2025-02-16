@@ -6,7 +6,6 @@ import Sounds from './pages/Sounds';
 function App() {
   return (
    <>
-   //Hello
       <Router>
           <Routes>
               <Route path='/' element={<Illustrations/>}/>
