@@ -1,11 +1,11 @@
 import React from "react";
 import logo from "../assets/icons/BBlogo.png";
-import styles from "../assets/styles/Navbar.module.css";
+import styles from "../assets/styles/soundNav.module.css";
 import iconL from "../assets/icons/illustrationic.png";
 import iconS from "../assets/icons/soundsic.png";
 import iconSt from "../assets/icons/stockic.png";
 import iconB from "../assets/icons/blogic.png";
-import nav from "../assets/images/illustration/navbg.jpg";
+import nav from "../assets/images/sounds/soundNav.jpg";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -22,7 +22,6 @@ const Navbar = () => {
             </p>
           </div>
           <ul className={styles.navIcons}>
-          
           <Link to='/'>  <div className={styles.iconContainer}>
               <img className={styles.icon} src={iconL} alt="Illustrations" height={70} width={70} />
               <p className={styles.iconText}>Illustrations</p>

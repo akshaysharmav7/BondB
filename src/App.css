@@ -1,5 +1,8 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%; /* Optional, ensures full height for the body */
+body, html::-webkit-scrollbar {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  *{
+    scrollbar-width: none;
   }

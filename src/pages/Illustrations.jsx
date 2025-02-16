@@ -9,9 +9,17 @@ import box7 from '../assets/images/illustration/box7.png';
 import box8 from '../assets/images/illustration/box8.png';
 import { IoIosSearch } from "react-icons/io";
 import Navbar from '../components/nav';
-import '../assets/styles/Illustrations.css'
+import styles from '../assets/styles/Illustrations.module.css';  // CSS Modules
 
 const items = [
+  { img: box1, text: 'Girl in the office' },
+  { img: box2, text: 'On the office' },
+  { img: box3, text: 'In the office' },
+  { img: box4, text: 'Working' },
+  { img: box5, text: 'Designer Life' },
+  { img: box6, text: 'Office snack' },
+  { img: box7, text: 'Quite Time' },
+  { img: box8, text: 'Deal ON' },
   { img: box1, text: 'Girl in the office' },
   { img: box2, text: 'On the office' },
   { img: box3, text: 'In the office' },
@@ -24,25 +32,24 @@ const items = [
 
 const Illustrations = () => {
   return (
-    <>
-      <div className="bgbox">
+    <div className={styles.wholebox}>
       <Navbar />
-        <div className="search">
-          <IoIosSearch className="sicon" />
-          <input type="text" placeholder="Search" className="inputbox" />
+      <div className={styles.bgbox}>
+        <div className={styles.search}>
+          <IoIosSearch className={styles.sicon} />
+          <input type="text" placeholder="Search" className={styles.inputbox} />
         </div>
-        <div className="bodycontainer">
-        <div className="container">
+        
+        <div className={styles.container}>
           {items.map((item, index) => (
-            <div key={index} className="items">
-              <img src={item.img} alt="" className="imgs" />
-              <p className="desc">{item.text}</p>
+            <div key={index} className={styles.items}>
+              <img src={item.img} alt="" className={styles.imgs} />
+              <p className={styles.desc}>{item.text}</p>
             </div>
           ))}
         </div>
-        </div>
       </div>
-    </>
+    </div>
   );
 };
 
