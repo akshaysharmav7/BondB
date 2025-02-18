@@ -5,14 +5,13 @@ import iconL from "../assets/icons/illustrationic.png";
 import iconS from "../assets/icons/soundsic.png";
 import iconSt from "../assets/icons/stockic.png";
 import iconB from "../assets/icons/blogic.png";
-import nav from "../assets/images/illustration/navbg.jpg";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({navbarBg, style}) => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.navContent}>
-        <img src={nav} className={styles.navbarBackground} alt="navbar" />
+        <img src={navbarBg} className={styles.navbarBackground} alt="navbar" />
         <div className={styles.logo}>
           <div className={styles.logoContent}>
             <img src={logo} alt="logo" height={102} width={252} />
@@ -25,7 +24,7 @@ const Navbar = () => {
           
           <Link to='/'>  <div className={styles.iconContainer}>
               <img className={styles.icon} src={iconL} alt="Illustrations" height={70} width={70} />
-              <p className={styles.iconText}>Illustrations</p>
+              <p style={style}>Illustrations</p>
             </div></Link>
 
             <Link to='/sounds'>   <div className={styles.iconContainer}>

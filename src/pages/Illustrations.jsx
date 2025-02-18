@@ -9,6 +9,7 @@ import box7 from '../assets/images/illustration/box7.png';
 import box8 from '../assets/images/illustration/box8.png';
 import { IoIosSearch } from "react-icons/io";
 import Navbar from '../components/nav';
+import NavBg from '../assets/images/illustration/navbg.jpg'
 import styles from '../assets/styles/Illustrations.module.css';  // CSS Modules
 
 const items = [
@@ -31,9 +32,15 @@ const items = [
 ];
 
 const Illustrations = () => {
+  const textStyle = {
+    fontSize: '12px',
+    textAlign: 'center',
+    marginTop: '4px'
+  }
+
   return (
     <div className={styles.wholebox}>
-      <Navbar />
+      <Navbar navbarBg = {NavBg} style={textStyle}/>
       <div className={styles.bgbox}>
         <div className={styles.search}>
           <IoIosSearch className={styles.sicon} />

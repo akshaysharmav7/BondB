@@ -4,7 +4,7 @@
     scroll-behavior: smooth;
     height: 1024px;
     width: 100vw;
-    background: url('../images/sounds//soundsBg.jpg') center center/cover no-repeat;
+    background: url('../images/sounds/soundsBg.jpg') center center/cover no-repeat;
     z-index: 1;
   }
   
