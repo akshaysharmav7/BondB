@@ -36,9 +36,16 @@ const Sounds = () => {
     marginTop: '4px'
   }
 
+  const description = {
+    color:'#FFFFFF',
+    fontSize: '11px',
+    marginTop: '8px'
+  }
+
   return (
     <div className={styles.wholebox}>
-      <Navbar navbarBg = {NavBg} style={textStyle}/>
+      <Navbar navbarBg = {NavBg} textStyle={textStyle} description={description}/>
+      
       <div className={styles.bgbox}>
         <div className={styles.search}>
           <IoIosSearch className={styles.sicon} />

@@ -1,6 +1,6 @@
 .wholebox {
   overflow-y: auto;
-  position: absolute;
+  /* position: absolute; */
   scroll-behavior: smooth;
   height: 1024px;
   width: 100vw;
@@ -14,10 +14,10 @@
   grid-row-gap: 90px;
   grid-column-gap: 37px;
   justify-content: center;
-  overflow-y: auto;
-  scrollbar-width: none;
+  /* overflow-y: auto; */
+  /* scrollbar-width: none; */
   padding-bottom: 54px;
-  max-height: 600px;
+  /* max-height: 600px; */
 }
 
 .bodycontainer {

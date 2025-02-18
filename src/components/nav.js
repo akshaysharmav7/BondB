@@ -7,7 +7,7 @@ import iconSt from "../assets/icons/stockic.png";
 import iconB from "../assets/icons/blogic.png";
 import { Link } from "react-router-dom";
 
-const Navbar = ({navbarBg, style}) => {
+const Navbar = ({navbarBg, textStyle, description}) => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.navContent}>
@@ -15,7 +15,7 @@ const Navbar = ({navbarBg, style}) => {
         <div className={styles.logo}>
           <div className={styles.logoContent}>
             <img src={logo} alt="logo" height={102} width={252} />
-            <p className={styles.description}>
+            <p style={description}>
               Bond Bind helps you to browse and download Sounds, Images,
               Illustrations and Design Blogs
             </p>
@@ -24,20 +24,20 @@ const Navbar = ({navbarBg, style}) => {
           
           <Link to='/'>  <div className={styles.iconContainer}>
               <img className={styles.icon} src={iconL} alt="Illustrations" height={70} width={70} />
-              <p style={style}>Illustrations</p>
+              <p style={textStyle}>Illustrations</p>
             </div></Link>
 
             <Link to='/sounds'>   <div className={styles.iconContainer}>
               <img className={styles.icon} src={iconS} alt="Sounds" height={70} width={70} />
-              <p className={styles.iconText}>Sounds</p>
+              <p style={textStyle}>Sounds</p>
             </div></Link>
             <div className={styles.iconContainer}>
               <img className={styles.icon} src={iconSt} alt="Stocks" height={70} width={70} />
-              <p className={styles.iconText}>Stocks</p>
+              <p style={textStyle}>Stocks</p>
             </div>
             <div className={styles.iconContainer}>
               <img className={styles.icon} src={iconB} alt="Blog" height={70} width={70} />
-              <p className={styles.iconText}>Blog</p>
+              <p style={textStyle}>Blog</p>
             </div>
           </ul>
         </div>

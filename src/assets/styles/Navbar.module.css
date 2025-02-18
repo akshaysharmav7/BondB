@@ -1,8 +1,10 @@
 .navbarBackground {
-  
   width: 100%;
 }
 
+.navbar{
+  z-index: 2;
+}
 .soundsBg{
   /* background: url('../images/sounds/soundsBg.jpg'); */
   width: 100%;
@@ -20,10 +22,10 @@
   left: 184px;
 }
 
-.description {
+/* .description {
   font-size: 11px;
   margin-top: 8px;
-}
+} */
 
 .navIcons {
   display: flex;

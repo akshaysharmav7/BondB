@@ -28,19 +28,42 @@ const items = [
   { img: box5, text: 'Designer Life' },
   { img: box6, text: 'Office snack' },
   { img: box7, text: 'Quite Time' },
-  { img: box8, text: 'Deal ON' }
+  { img: box8, text: 'Deal ON' },
+  { img: box1, text: 'Girl in the office' },
+  { img: box2, text: 'On the office' },
+  { img: box3, text: 'In the office' },
+  { img: box4, text: 'Working' },
+  { img: box5, text: 'Designer Life' },
+  { img: box6, text: 'Office snack' },
+  { img: box7, text: 'Quite Time' },
+  { img: box8, text: 'Deal ON' },
+  { img: box1, text: 'Girl in the office' },
+  { img: box2, text: 'On the office' },
+  { img: box3, text: 'In the office' },
+  { img: box4, text: 'Working' },
+  { img: box5, text: 'Designer Life' },
+  { img: box6, text: 'Office snack' },
+  { img: box7, text: 'Quite Time' },
+  { img: box8, text: 'Deal ON' },
 ];
 
 const Illustrations = () => {
+
   const textStyle = {
     fontSize: '12px',
     textAlign: 'center',
     marginTop: '4px'
   }
 
+  const description = {
+    color:'black',
+    fontSize: '11px',
+    marginTop: '8px'
+  }
+
   return (
     <div className={styles.wholebox}>
-      <Navbar navbarBg = {NavBg} style={textStyle}/>
+      <Navbar navbarBg = {NavBg} textStyle={textStyle} description={description}/>
       <div className={styles.bgbox}>
         <div className={styles.search}>
           <IoIosSearch className={styles.sicon} />
