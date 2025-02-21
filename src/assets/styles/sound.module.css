@@ -1,87 +1,66 @@
 .wholebox {
   overflow-y: auto;
-  /* position: absolute; */
-  scroll-behavior: smooth;
-  height: 1024px;
+  height: 100vh; /* Use viewport height */
   width: 100vw;
   background: url('../images/sounds/soundsBg.jpg') center center/cover no-repeat;
   z-index: 1;
 }
 
-.container {
+.bgbox {
+  padding: 20px; /* Add some padding around the content */
+}
+
+/* .container {
   display: grid;
   grid-template-columns: repeat(4, 290px);
   grid-row-gap: 90px;
   grid-column-gap: 37px;
   justify-content: center;
-  /* overflow-y: auto; */
-  /* scrollbar-width: none; */
   padding-bottom: 54px;
-  /* max-height: 600px; */
-}
+  margin: auto;
+} */
 
-.bodycontainer {
-  margin-left: 40px;
-  height: 630px;
-  scroll-behavior: smooth;
-  padding-right: 10px;
-  background: transparent;
-}
-
-.bodycontainer::-webkit-scrollbar {
-  width: 8px;
-}
-
-.bodycontainer::-webkit-scrollbar-thumb {
-  background-color: rgba(198, 198, 198, 0.5);
-  border-radius: 4px;
-}
-
-.bodycontainer::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(230, 230, 230, 0.7);
-}
 
 .search {
-  margin-top: 60px;
-  margin-bottom: 59px;
-  margin-left: 93px;
   width: 363px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  outline: none;
-  visibility: hidden;
-}
-
-.search:hover {
-  scale: 114%;
-  transition-duration: 1s;
-  outline: none;
+  margin:54px 0px 60px 110px;
+  
 }
 
 .sicon {
-  height: 30px;
-  width: 35px;
-  margin-left: 30px;
-  background: white;
-  border: 4px solid #E6EFF3;
-  border-radius: 100%;
-  padding: 8px;
-  box-shadow: 0 3px 2px grey;
+  height: 80px;
+  margin-bottom: 12px;
   z-index: 1;
+  cursor: pointer;
 }
 
 .inputbox {
   background-color: #E6EFF3;
-  width: 326px;
+  width: 0px;
   height: 47px;
   border-radius: 64px;
   border: none;
-  margin-left: -30px;
-  box-shadow: 0 3px 5px grey;
+  margin-left: -45px;
+  box-shadow: 0 3px 5px rgb(96, 96, 96);
   text-align: center;
   outline: none;
+  transition: width 1s ease;
+  pointer-events: auto; /* Prevent clicks on the input from affecting the parent */
 }
+
+.sicon:hover + .inputbox,  /* When hovering the search container */
+.inputbox:focus { /* OR when input is focused */
+  width: 363px; /* Expand width */
+  pointer-events: auto;
+}
+
+/* Add this to prevent collapse on hover when focused */
+.inputbox:focus:hover {
+  width: 363px;
+}
+
 
 .items {
   position: relative;
@@ -95,21 +74,17 @@
   object-fit: contain;
   border-radius: 23px;
   box-shadow: 0px 0px 0.8px black;
+  max-width: 100%; /* Make images responsive */
+  height: auto;
 }
 
 .desc {
   position: absolute;
-  margin-top: -20px;
-  bottom: -13px;
-  width: 290px;
+  bottom: 0px;
+  width: 288px;
   height: 66px;
   backdrop-filter: blur(4.79px);
-  background: linear-gradient(
-        to right, 
-        rgba(245, 245, 245, 0.7),  /* Light gray with 70% opacity */
-        rgba(255, 255, 255, 0),    /* Fully transparent */
-        rgba(255, 255, 255, 1)     /* White with full opacity */
-      );
+  background: linear-gradient(to right, rgba(245, 245, 245, 0.7), rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
   border-radius: 17px;
   border: 1px solid white;
   display: flex;
@@ -119,9 +94,34 @@
   font-weight: 390;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   box-shadow: 0px 0px 0.8px black;
+  transition: transform 0.6s ease; 
 }
 
 .items:hover .desc {
   transform: scale(1.1);
-  transition: transform 0.6s ease;
+}
+
+/* Media Queries */
+@media (max-width: 1400px) {
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 40px;
+    grid-column-gap: 17px;
+    max-width: 950px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    /* Consider removing or adjusting scale here if needed */
+    /* scale: 80%; */
+  }
 }

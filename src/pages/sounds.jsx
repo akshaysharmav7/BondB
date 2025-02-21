@@ -1,12 +1,13 @@
-import React from 'react';
+import React,{useRef, useState} from 'react';
 import box1 from '../assets/images/sounds/items/Rectangle 3.png';
 import box2 from '../assets/images/sounds/items/Rectangle 4.png';
 import box3 from '../assets/images/sounds/items/Rectangle 5.png';
 import box4 from '../assets/images/sounds/items/Rectangle 6.png';
-import { IoIosSearch } from "react-icons/io";
 import Navbar from '../components/nav';
 import styles from '../assets/styles/sound.module.css';
 import NavBg from '../assets/images/sounds/soundNav.jpg'
+import { Box, Grid2 } from '@mui/material';
+import searchIcon from '../assets/icons/sicon.png';
 
 const items = [
   { img: box1, text: 'Girl in the office' },
@@ -28,6 +29,19 @@ const items = [
 ];
 //Hello World
 const Sounds = () => {
+  const inputRef = useRef(null);
+  const [expanded, setExpanded] = useState(false); // State for expansion
+
+  const handleIconClick = () => {
+    setExpanded(true); // Expand the input
+    if (inputRef.current) {
+      inputRef.current.focus(); // Focus the input
+    }
+  };
+
+  const handleBlur = () => {
+    setExpanded(false); // Collapse on blur
+  };
 
   const textStyle = {
     color:'white',
@@ -44,23 +58,40 @@ const Sounds = () => {
 
   return (
     <div className={styles.wholebox}>
-      <Navbar navbarBg = {NavBg} textStyle={textStyle} description={description}/>
-      
-      <div className={styles.bgbox}>
+      <Navbar navbarBg={NavBg} textStyle={textStyle} description={description} />
+
+        {/* Search Bar */}
         <div className={styles.search}>
-          <IoIosSearch className={styles.sicon} />
-          <input type="text" placeholder="Search" className={styles.inputbox} />
+        <img 
+            src={searchIcon} 
+            className={styles.sicon} 
+            alt="Search Icon" 
+            onClick={handleIconClick}  // Click to expand and focus
+            style={{cursor:"pointer"}}
+          />
+          <input
+            type="text"
+            ref={inputRef}
+            placeholder="Search"
+            className={styles.inputbox}
+            onBlur={handleBlur}  // Blur to collapse
+          />
         </div>
-        
-        <div className={styles.container}>
+       
+      <Box className={styles.bgbox}>
+        <Grid2 container spacing={4} justifyContent="center">
           {items.map((item, index) => (
-            <div key={index} className={styles.items}>
-              <img src={item.img} alt="" className={styles.imgs} />
-              <p className={styles.desc}>{item.text}</p>
-            </div>
+            <Grid2 item xs={12} sm={6} md={4} lg={3} key={index}> 
+              <Box className={styles.items} >
+                <img src={item.img} alt="" className={styles.imgs} /> 
+                <Box className={styles.desc}>
+                  <p>{item.text}</p>
+                </Box>
+              </Box>
+            </Grid2>
           ))}
-        </div>
-      </div>
+        </Grid2>
+      </Box>
     </div>
   );
 };
