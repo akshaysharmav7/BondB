@@ -16,8 +16,7 @@ const Navbar = ({navbarBg, style}) => {
           <div className={styles.logoContent}>
             <img src={logo} alt="logo" height={102} width={252} />
             <p className={styles.description}>
-              Bond Bind helps you to browse and download Sounds, Images,
-              Illustrations and Design Blogs
+              Bond Bind helps 
             </p>
           </div>
           <ul className={styles.navIcons}>
