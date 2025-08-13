@@ -23,7 +23,7 @@ const Navbar = ({navbarBg, style}) => {
           
           <Link to='/'>  <div className={styles.iconContainer}>
               <img className={styles.icon} src={iconL} alt="Illustrations" height={70} width={70} />
-              <p style={style}>Illustrations</p>
+              <p style={style}>Akshay</p>
             </div></Link>
 
             <Link to='/sounds'>   <div className={styles.iconContainer}>
